@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bh4jx47r4unj3"]
+
+[ext_resource type="FontFile" uid="uid://dotw23ejwallw" path="res://Mocha Choco.otf" id="1_0fbet"]
+[ext_resource type="Texture2D" uid="uid://dukhui72ho3ky" path="res://Screenshot 2026-05-07 054217.png" id="1_62e2m"]
+[ext_resource type="Script" uid="uid://b3vmdewxttcg" path="res://control.gd" id="1_qtu10"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtu10"]
+texture = ExtResource("1_62e2m")
+modulate_color = Color(0.39688927, 0.39688927, 0.39688924, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtu10"]
+bg_color = Color(0.70642936, 0.56694597, 0.48806596, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
+bg_color = Color(0.35272777, 0.26309142, 0.20870867, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kbped"]
+bg_color = Color(0.42543367, 0.3213936, 0.2583364, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_size = 20
+
+[node name="Control" type="Control" unique_id=411125347]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qtu10")
+
+[node name="Panel" type="Panel" parent="." unique_id=686178724]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qtu10")
+
+[node name="Label" type="Label" parent="." unique_id=1501677770]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 147.0
+offset_right = 1830.0
+offset_bottom = 341.0
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/outline_size = 16
+theme_override_constants/shadow_outline_size = 24
+theme_override_fonts/font = ExtResource("1_0fbet")
+theme_override_font_sizes/font_size = 79
+text = "A Day in the Life of Dan - A Game Designer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=981439171]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.5
+offset_top = -112.0
+offset_right = 294.5
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_0fbet")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtu10")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ee4bf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kbped")
+text = "START"
+
+[node name="Button2" type="Button" parent="." unique_id=1846724441]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = 154.0
+offset_right = 295.0
+offset_bottom = 378.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_0fbet")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtu10")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ee4bf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kbped")
+text = "CREDITS"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_credits_button_pressed"]

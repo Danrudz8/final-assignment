@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://da03eoxvcla8x"]
+
+[ext_resource type="Script" uid="uid://cocaefk6csine" path="res://black_screen.gd" id="1_5so4g"]
+[ext_resource type="FontFile" uid="uid://dotw23ejwallw" path="res://Mocha Choco.otf" id="1_d5ucc"]
+[ext_resource type="Script" uid="uid://bol0cv3ipfh4c" path="res://label.gd" id="4_1ekph"]
+
+[node name="Node2D" type="Node2D" unique_id=1842689409]
+script = ExtResource("1_5so4g")
+
+[node name="Control" type="Control" parent="." unique_id=362050179]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=713531893]
+offset_right = 2197.0
+offset_bottom = 1268.0
+rotation = -0.0014136207
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=166978539]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.065
+offset_top = 517.0
+offset_right = 2169.935
+offset_bottom = 666.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_d5ucc")
+theme_override_font_sizes/font_size = 60
+text = "Great, time to go dance with the Dance Society
+ at Lower House!! Wait..."
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_1ekph")
